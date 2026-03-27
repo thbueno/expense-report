@@ -1,0 +1,37 @@
+{
+  "name": "@expense-report/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "dotenv -e ../../.env -- tsx watch src/index.ts",
+    "build": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "migrate": "drizzle-kit migrate",
+    "generate": "drizzle-kit generate",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@expense-report/shared": "workspace:*",
+    "@google/generative-ai": "^0.21.0",
+    "@hono/node-server": "^1.13.2",
+    "bcryptjs": "^2.4.3",
+    "drizzle-orm": "^0.41.0",
+    "hono": "^4.7.5",
+    "jose": "^5.9.6",
+    "postgres": "^3.4.5",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@hono/zod-validator": "^0.4.3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.10.0",
+    "drizzle-kit": "^0.30.4",
+    "dotenv-cli": "^7.4.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.4.5",
+    "vitest": "^2.1.8"
+  }
+}

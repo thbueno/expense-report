@@ -1,0 +1,14 @@
+{
+  "name": "expense-report",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter web dev\"",
+    "generate": "cd apps/api && DATABASE_URL=$(grep '^DATABASE_URL' ../../.env | cut -d= -f2-) pnpm drizzle-kit generate",
+    "migrate": "cd apps/api && DATABASE_URL=$(grep '^DATABASE_URL' .env 2>/dev/null || grep '^DATABASE_URL' ../../.env | cut -d= -f2-) pnpm drizzle-kit migrate",
+    "build": "pnpm --filter shared build && pnpm --filter api build && pnpm --filter web build",
+    "test": "pnpm --filter api test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
