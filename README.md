@@ -73,7 +73,7 @@ See [`DECISIONS.md`](./DECISIONS.md) for full reasoning.
 
 ## AI Usage Note
 
-This project was built using **Antigravity (Google DeepMind)** as the primary AI coding assistant throughout development.
+This project was built using claude code AI coding assistant throughout development.
 
 **What AI helped with:**
 - Scaffolding the monorepo structure, boilerplate files, and route handlers
@@ -86,5 +86,3 @@ This project was built using **Antigravity (Google DeepMind)** as the primary AI
 - The Gemini service's response schema mapping was adjusted from the AI's initial draft to correctly use `SchemaType` enums from the SDK
 - The upload route order was manually verified against Directive D — the AI had initially placed the Gemini call before the disk write
 - Removed over-engineering suggestions (background queue, audit trail) that were out of scope for the time budget
-
-AI artifacts: see `project-context.md` (the system prompt used to guide the AI), `CLAUDE.md`, and `docs/plan.md` for planning notes.
